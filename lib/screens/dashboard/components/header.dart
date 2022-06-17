@@ -27,7 +27,7 @@ class Header extends StatelessWidget {
           ),
         if (!Responsive.isMobile(context))
           Spacer(flex: Responsive.isDesktop(context) ? 2 : 1),
-        ProfileCard()
+        const ProfileCard()
       ],
     );
   }
@@ -59,7 +59,12 @@ class ProfileCard extends StatelessWidget {
                   const EdgeInsets.symmetric(horizontal: defaultPadding / 2),
               child: Text("Username"),
             ),
-          Icon(Icons.keyboard_arrow_down),
+          IconButton(
+            icon: const Icon(Icons.scanner),
+            onPressed: () {
+              Navigator.pushNamed(context, '/scan');
+            },
+          ),
         ],
       ),
     );

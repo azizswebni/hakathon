@@ -1,3 +1,4 @@
+import 'package:smart_bucket/components/qr_scanner.dart';
 import 'package:smart_bucket/constants.dart';
 import 'package:smart_bucket/controllers/MenuController.dart';
 import 'package:smart_bucket/screens/login/login.dart';
@@ -16,6 +17,7 @@ class Navigate {
   static Map<String, Widget Function(BuildContext)> routes = {
     '/': (context) => const MyLogin(),
     '/MainScreen': (context) => MainScreen(),
+    '/scan': (context) => const QRViewExample()
   };
 }
 

@@ -3,10 +3,10 @@ const mongoose = require("mongoose");
 const cowprodSchema = mongoose.Schema({
   cow_num:Number,
   body:[{
-    time: { type: String },
-    temp: { type: Number },
+    time: { type: Date , default:Date.now() },
     ph: { type: Number },
-    qt: { type: Number},
+    temperature: { type: Number },
+    level: { type: Number},
   }]
 });
 
